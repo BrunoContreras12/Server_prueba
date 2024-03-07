@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Received Data</title>
+</head>
+<body>
+    <h1>Data Received:</h1>
+    <p>User: <span id="user"></span></p>
+    <p>Password: <span id="password"></span></p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const user = params.get('user');
+        const password = params.get('password');
+
+        document.getElementById('user').innerText = user;
+        document.getElementById('password').innerText = password;
+    </script>
+</body>
+</html>
